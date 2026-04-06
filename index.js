@@ -46,6 +46,7 @@ async function initMod() {
                 maxLateralAcceleration: 1.2,
                 parallelTrackSpacing: 3.8,
                 trackClearance: 2,
+                maxSlopePercentage: 4.25,
                 minTurnRadius: 50,
                 minStationTurnRadius: 80,
                 trackMaintenanceCostPerMeter: 330,
