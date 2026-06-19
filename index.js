@@ -52,7 +52,7 @@ async function initMod() {
                 trackMaintenanceCostPerMeter: 330,
                 stationMaintenanceCostPerYear: 275_000,
             },
-            compatibleTrackTypes: ['S-Bahn', 'Tram-Train'],
+            compatibleTrackTypes: ['S-Bahn'],
             allowAtGradeRoadCrossing: true,
             appearance: {
                 color: '#449944'
@@ -62,7 +62,8 @@ async function initMod() {
                 ELEVATED: 1.6, 
                 CUT_AND_COVER: 1.2
             }
-        },
+        });
+
         API.trains.registerTrainType({
             id: 'Tram',
             name: 'Tram',
@@ -108,7 +109,8 @@ async function initMod() {
                 ELEVATED: 2, //should be used at grade, so it is more expensive to build not at grade.
                 CUT_AND_COVER: 2
             },
-        }),
+        });
+
         /*API.trains.registerTrainType({
             id: 'Tram-Train',
             name: 'Tram Train',
@@ -151,8 +153,7 @@ async function initMod() {
 
 
         //register station types ?
-        API.ui.showNotification(`${CONFIG.MOD_NAME} loaded successfully!`, 'success')
-    );
+        API.ui.showNotification(`${CONFIG.MOD_NAME} loaded successfully!`, 'success');
 
 
     } catch (error) {
